@@ -1,0 +1,15 @@
+[package]
+name = "hello-waxosuit"
+version = "0.1.0"
+authors = ["Greg Wiley <gwiley@cj.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wascap-guest = "0.0.3"
+
+[profile.release]
+# Optimize for small code size
+opt-level = "s"
